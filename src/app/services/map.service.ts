@@ -34,10 +34,6 @@ export class MapService {
     this.drawLines(points);
   }
 
-  public invalidateSize(): void {
-    this.map.invalidateSize();
-  }
-
   private setTileLayer(): void {
     L.tileLayer(tileLayerUrl, tileLayerOptions).addTo(this.map);
   }
