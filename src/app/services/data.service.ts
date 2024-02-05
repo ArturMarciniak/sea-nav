@@ -19,7 +19,7 @@ export class DataService {
   private getNavigationRoutes(filePath: string): Observable<NavigationRoute[]> {
     return this.http.get(filePath, { responseType: 'text' }).pipe(
       map((data) => {
-        const parsedData = this.papa.parse(data, { delimiter: ',' });
+        const parsedData = this.papa.parse(data, { skipEmptyLines: true });
         return MappingUtils.mapCsvToRouteArray(parsedData);
       })
     );
