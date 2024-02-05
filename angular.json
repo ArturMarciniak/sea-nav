@@ -17,6 +17,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "leaflet",
+              "papaparse",
+              "ngx-papaparse"
+            ],
             "outputPath": "dist/route-navigation",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -29,6 +34,7 @@
               "src/styles.scss",
               "./node_modules/leaflet/dist/leaflet.css"
             ],
+
             "scripts": []
           },
           "configurations": {
