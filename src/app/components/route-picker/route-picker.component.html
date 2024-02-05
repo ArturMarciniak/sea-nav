@@ -1,0 +1,8 @@
+<mat-form-field appearance="fill">
+  <mat-label>Route</mat-label>
+  <mat-select [formControl]="fc">
+    <mat-option *ngFor="let option of routes$ | async" [value]="option">
+      {{ option.from_port }} -> {{ option.to_port }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
